@@ -1,0 +1,24 @@
+server:
+  port: 8081
+spring:
+  application: auth
+  datasource:
+    url: jdbc:mysql://localhost:3306/crm_auth?serverTimezone=GMT%2B8
+    type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+    username: root
+    password: root
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+mybatis:
+  mapper-locations: ['classpath*:mapping/*/*.xml','classpath*:mapping/*.xml']
+  configuration:
+    map-underscore-to-camel-case: true
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#      service-url:
+#        defaultZone: http://localhost:11000/eureka/
